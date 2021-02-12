@@ -23,12 +23,15 @@ class ColorPickerVIew: UIView {
         return button
     }()
     
-    private lazy var colorDisplay : UIColor = {
-        let color = UIColor()
-        return color
+    public var colorButton: UIButton = {
+        let button = UIButton()
+//        button.setImage(UIImage(named: "beach-ball"), for: .normal)
+        button.setTitle("create color", for: .normal)
+//        button.backgroundColor = .blue
+        return button
     }()
     
-    private lazy var colorView: UIView = {
+    public lazy var colorView: UIView = {
         let view = UIView()
         view.backgroundColor = .systemOrange
         return view
@@ -47,6 +50,8 @@ class ColorPickerVIew: UIView {
     private func commonInit() {
 //        backgroundColor = .white
         setupTextField()
+        setupButton()
+        setupColorDisplay()
         setupButton()
     }
     
@@ -73,10 +78,24 @@ class ColorPickerVIew: UIView {
         addSubview(colorView)
         colorView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            colorView.topAnchor.constraint(equalTo: createButton.bottomAnchor, constant: 20),
+            colorView.topAnchor.constraint(equalTo: createButton.bottomAnchor, constant: 50),
             colorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            colorView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 20),
-            colorView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 20)
+            colorView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            colorView.heightAnchor.constraint(equalToConstant: 100)
+//            colorView.bottomAnchor.constraint(equalTo: colorButton.topAnchor, constant: -20)
+        ])
+    }
+    
+    private func setupColorButton() {
+        addSubview(colorButton)
+        colorButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+//            colorButton.centerYAnchor.constraint(equalTo: centerYAnchor),
+            colorButton.topAnchor.constraint(equalTo: colorView.bottomAnchor, constant: 20),
+            colorButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            colorButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            colorButton.widthAnchor.constraint(equalToConstant: 20),
+            colorButton.heightAnchor.constraint(equalToConstant: 20)
         ])
     }
 }

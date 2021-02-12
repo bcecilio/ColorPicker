@@ -8,9 +8,12 @@
 import UIKit
 
 class ColorPickerController: UIViewController {
+    
+    private let pickerView = ColorPickerVIew()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view = pickerView
         view.backgroundColor = .systemGreen
     }
     

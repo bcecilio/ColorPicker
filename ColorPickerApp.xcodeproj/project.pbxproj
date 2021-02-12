@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B776B35125D64407001575C1 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B776B35025D64407001575C1 /* ColorCell.swift */; };
 		B776B35D25D64B3E001575C1 /* ColorPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B776B35C25D64B3E001575C1 /* ColorPickerController.swift */; };
+		B776B36225D64DED001575C1 /* ColorPickerVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B776B36125D64DED001575C1 /* ColorPickerVIew.swift */; };
 		B7F4E59C25D63E0C00DB432A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F4E59B25D63E0C00DB432A /* AppDelegate.swift */; };
 		B7F4E59E25D63E0C00DB432A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F4E59D25D63E0C00DB432A /* SceneDelegate.swift */; };
 		B7F4E5A025D63E0C00DB432A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F4E59F25D63E0C00DB432A /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		B776B35025D64407001575C1 /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		B776B35C25D64B3E001575C1 /* ColorPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerController.swift; sourceTree = "<group>"; };
+		B776B36125D64DED001575C1 /* ColorPickerVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerVIew.swift; sourceTree = "<group>"; };
 		B7F4E59825D63E0C00DB432A /* ColorPickerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPickerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F4E59B25D63E0C00DB432A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7F4E59D25D63E0C00DB432A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				B7F4E5D725D63E9100DB432A /* MainView.swift */,
+				B776B36125D64DED001575C1 /* ColorPickerVIew.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				B7F4E5D825D63E9100DB432A /* MainView.swift in Sources */,
 				B7F4E59C25D63E0C00DB432A /* AppDelegate.swift in Sources */,
 				B776B35125D64407001575C1 /* ColorCell.swift in Sources */,
+				B776B36225D64DED001575C1 /* ColorPickerVIew.swift in Sources */,
 				B7F4E59E25D63E0C00DB432A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

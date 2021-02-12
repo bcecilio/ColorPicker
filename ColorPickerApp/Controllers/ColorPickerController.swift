@@ -21,11 +21,11 @@ class ColorPickerController: UIViewController {
         self.colorPicker.delegate = self
         self.colorPicker.supportsAlpha = true
         self.colorPicker.selectedColor = selectedColor
-//        self.present(UIColorPickerViewController, animated: true)
+        pickerView.colorButton.addTarget(self, action: #selector(presentColorPicker(_:)), for: .touchUpInside)
         pickerView.colorView.backgroundColor = selectedColor
     }
     
-    private func presentColorPicker(_ sender: UIButton) {
+    @objc private func presentColorPicker(_ sender: UIButton) {
         
         present(self.colorPicker, animated: true)
     }
@@ -34,4 +34,11 @@ class ColorPickerController: UIViewController {
 
 extension ColorPickerController: UIColorPickerViewControllerDelegate {
     
+    func colorPickerViewControllerDidSelectColor(_ viewController: UIColorPickerViewController) {
+        selectedColor = viewController.selectedColor
+    }
+    
+    func colorPickerViewControllerDidFinish(_ viewController: UIColorPickerViewController) {
+        pickerView.colorView.backgroundColor = selectedColor
+    }
 }

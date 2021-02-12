@@ -25,8 +25,8 @@ class ColorPickerVIew: UIView {
     
     public var colorButton: UIButton = {
         let button = UIButton()
-//        button.setImage(UIImage(named: "beach-ball"), for: .normal)
-        button.setTitle("create color", for: .normal)
+        button.setImage(UIImage(named: "beach-ball"), for: .normal)
+//        button.setTitle("create color", for: .normal)
 //        button.backgroundColor = .blue
         return button
     }()
@@ -52,7 +52,7 @@ class ColorPickerVIew: UIView {
         setupTextField()
         setupButton()
         setupColorDisplay()
-        setupButton()
+        setupColorButton()
     }
     
     private func setupTextField() {
@@ -90,10 +90,9 @@ class ColorPickerVIew: UIView {
         addSubview(colorButton)
         colorButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-//            colorButton.centerYAnchor.constraint(equalTo: centerYAnchor),
             colorButton.topAnchor.constraint(equalTo: colorView.bottomAnchor, constant: 20),
-            colorButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            colorButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            colorButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 200),
+            colorButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -200),
             colorButton.widthAnchor.constraint(equalToConstant: 20),
             colorButton.heightAnchor.constraint(equalToConstant: 20)
         ])

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B776B35125D64407001575C1 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B776B35025D64407001575C1 /* ColorCell.swift */; };
 		B7F4E59C25D63E0C00DB432A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F4E59B25D63E0C00DB432A /* AppDelegate.swift */; };
 		B7F4E59E25D63E0C00DB432A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F4E59D25D63E0C00DB432A /* SceneDelegate.swift */; };
 		B7F4E5A025D63E0C00DB432A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F4E59F25D63E0C00DB432A /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B776B35025D64407001575C1 /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		B7F4E59825D63E0C00DB432A /* ColorPickerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPickerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F4E59B25D63E0C00DB432A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7F4E59D25D63E0C00DB432A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		B776B35525D6440E001575C1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B776B35025D64407001575C1 /* ColorCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		B7F4E58F25D63E0B00DB432A = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +119,7 @@
 			children = (
 				B7F4E59B25D63E0C00DB432A /* AppDelegate.swift */,
 				B7F4E59D25D63E0C00DB432A /* SceneDelegate.swift */,
+				B776B35525D6440E001575C1 /* Cells */,
 				B7F4E5DC25D63E9B00DB432A /* Views */,
 				B776B34925D64273001575C1 /* Controllers */,
 				B7F4E5A425D63E1000DB432A /* Assets.xcassets */,
@@ -276,6 +287,7 @@
 				B7F4E5A025D63E0C00DB432A /* ViewController.swift in Sources */,
 				B7F4E5D825D63E9100DB432A /* MainView.swift in Sources */,
 				B7F4E59C25D63E0C00DB432A /* AppDelegate.swift in Sources */,
+				B776B35125D64407001575C1 /* ColorCell.swift in Sources */,
 				B7F4E59E25D63E0C00DB432A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

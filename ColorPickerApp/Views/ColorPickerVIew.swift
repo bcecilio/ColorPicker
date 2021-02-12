@@ -11,6 +11,9 @@ class ColorPickerVIew: UIView {
 
     public var colorName: UITextField = {
         let field = UITextField()
+        field.backgroundColor = .white
+        field.layer.cornerRadius = 6
+        field.placeholder = " Name your Swatch"
         return field
     }()
     
@@ -23,6 +26,12 @@ class ColorPickerVIew: UIView {
     private lazy var colorDisplay : UIColor = {
         let color = UIColor()
         return color
+    }()
+    
+    private lazy var colorView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemOrange
+        return view
     }()
 
     override init(frame: CGRect) {
@@ -45,9 +54,9 @@ class ColorPickerVIew: UIView {
         addSubview(colorName)
         colorName.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            colorName.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            colorName.topAnchor.constraint(equalTo: topAnchor, constant: 15),
             colorName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            colorName.widthAnchor.constraint(equalToConstant: 50)
+            colorName.widthAnchor.constraint(equalToConstant: 200)
         ])
     }
     
@@ -57,6 +66,17 @@ class ColorPickerVIew: UIView {
         NSLayoutConstraint.activate([
             createButton.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             createButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+        ])
+    }
+    
+    private func setupColorDisplay() {
+        addSubview(colorView)
+        colorView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            colorView.topAnchor.constraint(equalTo: createButton.bottomAnchor, constant: 20),
+            colorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            colorView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 20),
+            colorView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 20)
         ])
     }
 }

@@ -23,6 +23,7 @@ class ColorPickerController: UIViewController {
         self.colorPicker.selectedColor = selectedColor
         pickerView.colorButton.addTarget(self, action: #selector(presentColorPicker(_:)), for: .touchUpInside)
         pickerView.colorView.backgroundColor = selectedColor
+        print("SELECTED COLOR: \(selectedColor)")
     }
     
     @objc private func presentColorPicker(_ sender: UIButton) {

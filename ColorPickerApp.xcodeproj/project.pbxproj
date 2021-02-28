@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B704F5E625EB3DBB00D2DD02 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B704F5E525EB3DBB00D2DD02 /* Model.swift */; };
+		B704F5EF25EB409300D2DD02 /* DataPersistence in Frameworks */ = {isa = PBXBuildFile; productRef = B704F5EE25EB409300D2DD02 /* DataPersistence */; };
+		B704F5F425EB46C200D2DD02 /* Filemanager + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B704F5F325EB46C200D2DD02 /* Filemanager + Extensions.swift */; };
 		B776B35125D64407001575C1 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B776B35025D64407001575C1 /* ColorCell.swift */; };
 		B776B35D25D64B3E001575C1 /* ColorPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B776B35C25D64B3E001575C1 /* ColorPickerController.swift */; };
 		B776B36225D64DED001575C1 /* ColorPickerVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B776B36125D64DED001575C1 /* ColorPickerVIew.swift */; };
@@ -38,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B704F5E525EB3DBB00D2DD02 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B704F5F325EB46C200D2DD02 /* Filemanager + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Filemanager + Extensions.swift"; sourceTree = "<group>"; };
 		B776B35025D64407001575C1 /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		B776B35C25D64B3E001575C1 /* ColorPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerController.swift; sourceTree = "<group>"; };
 		B776B36125D64DED001575C1 /* ColorPickerVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerVIew.swift; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B704F5EF25EB409300D2DD02 /* DataPersistence in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +130,8 @@
 			children = (
 				B7F4E59B25D63E0C00DB432A /* AppDelegate.swift */,
 				B7F4E59D25D63E0C00DB432A /* SceneDelegate.swift */,
+				B704F5E525EB3DBB00D2DD02 /* Model.swift */,
+				B704F5F325EB46C200D2DD02 /* Filemanager + Extensions.swift */,
 				B776B35525D6440E001575C1 /* Cells */,
 				B7F4E5DC25D63E9B00DB432A /* Views */,
 				B776B34925D64273001575C1 /* Controllers */,
@@ -177,6 +185,9 @@
 			dependencies = (
 			);
 			name = ColorPickerApp;
+			packageProductDependencies = (
+				B704F5EE25EB409300D2DD02 /* DataPersistence */,
+			);
 			productName = ColorPickerApp;
 			productReference = B7F4E59825D63E0C00DB432A /* ColorPickerApp.app */;
 			productType = "com.apple.product-type.application";
@@ -248,6 +259,9 @@
 				Base,
 			);
 			mainGroup = B7F4E58F25D63E0B00DB432A;
+			packageReferences = (
+				B704F5ED25EB409300D2DD02 /* XCRemoteSwiftPackageReference "DataPersistence" */,
+			);
 			productRefGroup = B7F4E59925D63E0C00DB432A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -292,11 +306,13 @@
 			files = (
 				B7F4E5A025D63E0C00DB432A /* ViewController.swift in Sources */,
 				B776B35D25D64B3E001575C1 /* ColorPickerController.swift in Sources */,
+				B704F5F425EB46C200D2DD02 /* Filemanager + Extensions.swift in Sources */,
 				B7F4E5D825D63E9100DB432A /* MainView.swift in Sources */,
 				B7F4E59C25D63E0C00DB432A /* AppDelegate.swift in Sources */,
 				B776B35125D64407001575C1 /* ColorCell.swift in Sources */,
 				B776B36225D64DED001575C1 /* ColorPickerVIew.swift in Sources */,
 				B7F4E59E25D63E0C00DB432A /* SceneDelegate.swift in Sources */,
+				B704F5E625EB3DBB00D2DD02 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +637,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B704F5ED25EB409300D2DD02 /* XCRemoteSwiftPackageReference "DataPersistence" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexpaul/DataPersistence";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B704F5EE25EB409300D2DD02 /* DataPersistence */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B704F5ED25EB409300D2DD02 /* XCRemoteSwiftPackageReference "DataPersistence" */;
+			productName = DataPersistence;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B7F4E59025D63E0B00DB432A /* Project object */;
 }

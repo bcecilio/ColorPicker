@@ -16,6 +16,8 @@ class ViewController: UIViewController {
         self.navigationItem.title = "Colors"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(presentColorPickerVC(_:)))
         view = mainView
+        // print path to document's directory
+        // print("PATH TO DOCUMENT DIRECTORY \(FileManager.getDocumentsDirectory())")
     }
 
     @objc private func presentColorPickerVC(_ sender: UIBarButtonItem) {

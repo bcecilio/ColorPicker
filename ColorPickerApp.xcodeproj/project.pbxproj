@@ -10,6 +10,7 @@
 		B704F5E625EB3DBB00D2DD02 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B704F5E525EB3DBB00D2DD02 /* Model.swift */; };
 		B704F5EF25EB409300D2DD02 /* DataPersistence in Frameworks */ = {isa = PBXBuildFile; productRef = B704F5EE25EB409300D2DD02 /* DataPersistence */; };
 		B704F5F425EB46C200D2DD02 /* Filemanager + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B704F5F325EB46C200D2DD02 /* Filemanager + Extensions.swift */; };
+		B704F5FA25EB5CB300D2DD02 /* PersistanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B704F5F925EB5CB300D2DD02 /* PersistanceHelper.swift */; };
 		B776B35125D64407001575C1 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B776B35025D64407001575C1 /* ColorCell.swift */; };
 		B776B35D25D64B3E001575C1 /* ColorPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B776B35C25D64B3E001575C1 /* ColorPickerController.swift */; };
 		B776B36225D64DED001575C1 /* ColorPickerVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B776B36125D64DED001575C1 /* ColorPickerVIew.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		B704F5E525EB3DBB00D2DD02 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B704F5F325EB46C200D2DD02 /* Filemanager + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Filemanager + Extensions.swift"; sourceTree = "<group>"; };
+		B704F5F925EB5CB300D2DD02 /* PersistanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceHelper.swift; sourceTree = "<group>"; };
 		B776B35025D64407001575C1 /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		B776B35C25D64B3E001575C1 /* ColorPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerController.swift; sourceTree = "<group>"; };
 		B776B36125D64DED001575C1 /* ColorPickerVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerVIew.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				B7F4E59D25D63E0C00DB432A /* SceneDelegate.swift */,
 				B704F5E525EB3DBB00D2DD02 /* Model.swift */,
 				B704F5F325EB46C200D2DD02 /* Filemanager + Extensions.swift */,
+				B704F5F925EB5CB300D2DD02 /* PersistanceHelper.swift */,
 				B776B35525D6440E001575C1 /* Cells */,
 				B7F4E5DC25D63E9B00DB432A /* Views */,
 				B776B34925D64273001575C1 /* Controllers */,
@@ -313,6 +316,7 @@
 				B776B36225D64DED001575C1 /* ColorPickerVIew.swift in Sources */,
 				B7F4E59E25D63E0C00DB432A /* SceneDelegate.swift in Sources */,
 				B704F5E625EB3DBB00D2DD02 /* Model.swift in Sources */,
+				B704F5FA25EB5CB300D2DD02 /* PersistanceHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,8 +6,17 @@
 //
 
 import Foundation
+import UIKit
 
-struct Color {
-    let color: Data
+struct Color: Codable, Equatable {
+    let color: [CGFloat]
     let colorName: String
 }
+
+//struct Color: Codable, Equatable {
+//
+//    var color: UIColor {
+//        return UIColor()
+//    }
+//    let colorName: String
+//}

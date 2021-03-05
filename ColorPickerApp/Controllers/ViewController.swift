@@ -26,23 +26,9 @@ class ViewController: UIViewController {
         mainView.collectionView.delegate = self
         mainView.collectionView.dataSource = self
         mainView.collectionView.register(ColorCell.self, forCellWithReuseIdentifier: "colorCell")
-        // print path to document's directory
-        // print("PATH TO DOCUMENT DIRECTORY \(FileManager.getDocumentsDirectory())")
         loadColors()
         print("COLORS: \(colors)")
     }
-    
-//    private func newColorWillBeAdded(segue: UIStoryboardSegue) {
-//        // reference to ColorPickerController instance
-//        guard let colorPickerController = segue.source as? ColorPickerController else {
-//            print("could not create new color")
-//            return
-//        }
-//        let newColor = colorPickerController.colorPicker.selectedColor
-//        let cgColor = newColor.cgColor
-//        let components = cgColor.components!
-//        createNewColor(color: Color(color: components, colorName: "some color"))
-//    }
     
     private func loadColors() {
         do {
@@ -85,9 +71,6 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
             fatalError("could not dequeue colorCell")
         }
         let colorComponents = colors[indexPath.row].color
-//        cell.colorBackground.backgroundColor = UIColor()
-//        let cgColor = CGColor(red: colorComponents[0], green: colorComponents[1], blue: colorComponents[2], alpha: 1.0)
-//        let color = UIColor(components: colorComponents)
         cell.colorBackground.backgroundColor = UIColor(components: colorComponents)
         return cell
     }

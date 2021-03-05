@@ -56,7 +56,11 @@ class ViewController: UIViewController {
 
 extension ViewController: ColorPickerControllerDelegate {
     func createButtonPressed(vc: ColorPickerController, color: [CGFloat]) {
-        colors.append(Color(color: color, colorName: "some color"))
+        let newColor = Color(color: color, colorName: "some color")
+        colors.append(newColor)
+        let indexPath = IndexPath(row: colors.count - 1, section: 0)
+        mainView.collectionView.insertItems(at: [indexPath])
+        try? dataPersistence.createItem(newColor)
     }
 }
 

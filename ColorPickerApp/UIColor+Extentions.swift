@@ -24,4 +24,9 @@ extension UIColor {
            blue: rgb & 0xFF
        )
    }
+    
+    convenience init(components: [CGFloat]) {
+        let cgColor = CGColor(red: components[0], green: components[1], blue: components[2], alpha: 1.0)
+        self.init(cgColor: cgColor)
+    }
 }

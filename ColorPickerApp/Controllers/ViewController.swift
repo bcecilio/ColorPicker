@@ -75,8 +75,16 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
             fatalError("could not dequeue colorCell")
         }
         let colorComponents = colors[indexPath.row].color
-        cell.colorBackground.backgroundColor = UIColor(components: colorComponents)
+        let newColor = colors[indexPath.row]
+        cell.colorView.backgroundColor = UIColor(components: colorComponents)
+        cell.colorName.text = newColor.colorName
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let cellSize = CGSize(width: collectionView.bounds.width, height: collectionView.bounds.height / 3)
+        return cellSize
     }
 }
 

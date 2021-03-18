@@ -78,13 +78,24 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
         let newColor = colors[indexPath.row]
         cell.colorView.backgroundColor = UIColor(components: colorComponents)
         cell.colorName.text = newColor.colorName
+        cell.layer.cornerRadius = 15.0
+        cell.layer.borderWidth = 0.0
+        cell.layer.shadowColor = UIColor.lightGray.cgColor
+        cell.layer.shadowOffset = CGSize(width: 5, height: 5)
+        cell.layer.shadowRadius = 5.0
+        cell.layer.shadowOpacity = 1.0
+        cell.layer.masksToBounds = false
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let cellSize = CGSize(width: collectionView.bounds.width, height: collectionView.bounds.height / 3)
+        let cellSize = CGSize(width: collectionView.frame.width - 60, height: 400)
         return cellSize
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 30
     }
 }
 

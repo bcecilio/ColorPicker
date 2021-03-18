@@ -11,11 +11,14 @@ class ColorCell: UICollectionViewCell {
     
     public var colorView: UIView = {
         let view = UIView()
+        view.layer.cornerRadius = 15
         return view
     }()
     
     public var colorName: UILabel = {
         let text = UILabel()
+        text.textColor = .white
+        text.font = UIFont(name: "HelveticaNeue-Bold", size: 24)
         return text
     }()
     
@@ -56,17 +59,16 @@ class ColorCell: UICollectionViewCell {
     }
     
     private func commonInit() {
-        backgroundColor = UIColor(white: 1.0, alpha: 0.5)
-        setupColorName()
         setupColorView()
-        setupComponents()
+        setupColorName()
+//        setupComponents()
     }
     
     private func setupColorName() {
-        addSubview(colorName)
+        colorView.addSubview(colorName)
         colorName.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            colorName.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+            colorName.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 50),
             colorName.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
             colorName.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
 //            colorName.bottomAnchor.constraint(equalTo: colorView.topAnchor, constant: 20)
@@ -77,11 +79,11 @@ class ColorCell: UICollectionViewCell {
         addSubview(colorView)
         colorView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            colorView.topAnchor.constraint(equalTo: colorName.bottomAnchor, constant: 10),
+            colorView.topAnchor.constraint(equalTo: topAnchor),
 //            colorView.heightAnchor.constraint(equalTo: heightAnchor, constant: 80),
-            colorView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -60),
-            colorView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            colorView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            colorView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            colorView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            colorView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
         ])
     }
     

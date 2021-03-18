@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ColorPickerControllerDelegate: AnyObject {
-    func createButtonPressed(vc: ColorPickerController, color: [CGFloat])
+    func createButtonPressed(vc: ColorPickerController, color: [CGFloat], colorName: String)
 }
 
 class ColorPickerController: UIViewController {
@@ -36,7 +36,8 @@ class ColorPickerController: UIViewController {
         
         let cgColor = selectedColor.cgColor
         let components = cgColor.components!
-        delegate?.createButtonPressed(vc: self, color: components)
+        let newColorName = pickerView.colorName.text
+        delegate?.createButtonPressed(vc: self, color: components, colorName: newColorName ?? "Some Color")
         self.dismiss(animated: true)
     }
     

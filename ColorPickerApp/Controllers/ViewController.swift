@@ -55,8 +55,9 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: ColorPickerControllerDelegate {
-    func createButtonPressed(vc: ColorPickerController, color: [CGFloat]) {
-        let newColor = Color(color: color, colorName: "some color")
+    
+    func createButtonPressed(vc: ColorPickerController, color: [CGFloat], colorName: String) {
+        let newColor = Color(color: color, colorName: colorName)
         colors.append(newColor)
         let indexPath = IndexPath(row: colors.count - 1, section: 0)
         mainView.collectionView.insertItems(at: [indexPath])
@@ -81,7 +82,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
         cell.layer.cornerRadius = 15.0
         cell.layer.borderWidth = 0.0
         cell.layer.shadowColor = UIColor.lightGray.cgColor
-        cell.layer.shadowOffset = CGSize(width: 5, height: 5)
+        cell.layer.shadowOffset = CGSize(width: 6, height: 5)
         cell.layer.shadowRadius = 5.0
         cell.layer.shadowOpacity = 1.0
         cell.layer.masksToBounds = false

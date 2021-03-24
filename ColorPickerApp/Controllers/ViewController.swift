@@ -98,5 +98,12 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 30
     }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        cell.alpha = 0
+        UIView.animate(withDuration: 0.5) {
+            cell.alpha = 1
+        }
+    }
 }
 

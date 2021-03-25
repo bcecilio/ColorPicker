@@ -79,9 +79,12 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
         let newColor = colors[indexPath.row]
         cell.colorView.backgroundColor = UIColor(components: colorComponents)
         cell.colorName.text = newColor.colorName
-        cell.redComponent.text = "red: \(colorComponents[0])"
-        cell.greenComponent.text = "green: \(colorComponents[1])"
-        cell.blueComponent.text = "blue: \(colorComponents[2])"
+        let redValue = colorComponents[0]
+        let greenValue = colorComponents[1]
+        let blueValue = colorComponents[2]
+        cell.redComponent.text = "red: \(String(format: "red: %.2f", redValue))"
+        cell.greenComponent.text = "green: \(String(format: "green: %.2f", greenValue))"
+        cell.blueComponent.text = "blue: \(String(format: "blue: %.2f", blueValue))"
         cell.layer.cornerRadius = 15.0
         cell.layer.borderWidth = 0.0
         cell.layer.shadowColor = UIColor.lightGray.cgColor

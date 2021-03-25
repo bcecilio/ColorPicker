@@ -79,6 +79,9 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
         let newColor = colors[indexPath.row]
         cell.colorView.backgroundColor = UIColor(components: colorComponents)
         cell.colorName.text = newColor.colorName
+        cell.redComponent.text = "red: \(colorComponents[0])"
+        cell.greenComponent.text = "green: \(colorComponents[1])"
+        cell.blueComponent.text = "blue: \(colorComponents[2])"
         cell.layer.cornerRadius = 15.0
         cell.layer.borderWidth = 0.0
         cell.layer.shadowColor = UIColor.lightGray.cgColor
@@ -101,7 +104,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         cell.alpha = 0
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 1.0) {
             cell.alpha = 1
         }
     }

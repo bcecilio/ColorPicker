@@ -24,7 +24,7 @@ class ColorCell: UICollectionViewCell {
     
     private lazy var rgbContainer: UIStackView = {
         let stackView = UIStackView()
-        stackView.axis = .horizontal
+        stackView.axis = .vertical
         stackView.distribution = .equalCentering
         stackView.alignment = .fill
         stackView.addArrangedSubview(redComponent)
@@ -33,19 +33,28 @@ class ColorCell: UICollectionViewCell {
         return stackView
     }()
     
-    public var redComponent: UIView = {
-        let view = UIView()
-        return view
+    public var redComponent: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "HelveticaNeue", size: 15)
+        label.textColor = .white
+        label.text = "red:"
+        return label
     }()
     
-    public var greenComponent: UIView = {
-        let view = UIView()
-        return view
+    public var greenComponent: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "HelveticaNeue", size: 15)
+        label.textColor = .white
+        label.text = "green:"
+        return label
     }()
     
-    public var blueComponent: UIView = {
-        let view = UIView()
-        return view
+    public var blueComponent: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "HelveticaNeue", size: 15)
+        label.textColor = .white
+        label.text = "blue:"
+        return label
     }()
     
     override init(frame: CGRect) {
@@ -61,7 +70,7 @@ class ColorCell: UICollectionViewCell {
     private func commonInit() {
         setupColorView()
         setupColorName()
-//        setupComponents()
+        setupComponents()
     }
     
     private func setupColorName() {
@@ -88,12 +97,13 @@ class ColorCell: UICollectionViewCell {
     }
     
     private func setupComponents() {
-        addSubview(rgbContainer)
+        colorView.addSubview(rgbContainer)
         rgbContainer.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            rgbContainer.topAnchor.constraint(equalTo: colorView.bottomAnchor, constant: 20),
+            rgbContainer.topAnchor.constraint(equalTo: colorName.bottomAnchor, constant: 30),
             rgbContainer.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            rgbContainer.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20)
+            rgbContainer.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            rgbContainer.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -50)
         ])
     }
 }

@@ -14,12 +14,18 @@ class ColorPickerVIew: UIView {
         field.backgroundColor = .white
         field.layer.cornerRadius = 6
         field.placeholder = " Name your Swatch"
+        field.attributedPlaceholder = NSAttributedString(string: " Name your Swatch", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        field.backgroundColor = .lightGray
+        field.borderStyle = .roundedRect
         return field
     }()
     
     public var createButton: UIButton = {
         let button = UIButton()
+        button.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 16)
         button.setTitle("Create Swatch", for: .normal)
+        button.backgroundColor = .systemBlue
+        button.layer.cornerRadius = 5
         return button
     }()
     
@@ -33,7 +39,8 @@ class ColorPickerVIew: UIView {
     
     public lazy var colorView: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemOrange
+        view.layer.borderWidth = 1.0
+        view.layer.cornerRadius = 5
         return view
     }()
 

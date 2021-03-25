@@ -13,7 +13,7 @@ protocol ColorPickerControllerDelegate: AnyObject {
 
 class ColorPickerController: UIViewController {
     
-    var selectedColor = UIColor.orange
+    var selectedColor = UIColor.white
     var colorPicker = UIColorPickerViewController()
     
     private let pickerView = ColorPickerVIew()
@@ -22,7 +22,7 @@ class ColorPickerController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = pickerView
-        view.backgroundColor = .systemGreen
+        view.backgroundColor = .white
         self.colorPicker.delegate = self
         self.colorPicker.supportsAlpha = true
         self.colorPicker.selectedColor = selectedColor

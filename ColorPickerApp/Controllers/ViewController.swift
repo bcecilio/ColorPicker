@@ -82,15 +82,15 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
         let redValue = colorComponents[0]
         let greenValue = colorComponents[1]
         let blueValue = colorComponents[2]
-        cell.redComponent.text = "red: \(String(format: "red: %.2f", redValue))"
-        cell.greenComponent.text = "green: \(String(format: "green: %.2f", greenValue))"
-        cell.blueComponent.text = "blue: \(String(format: "blue: %.2f", blueValue))"
+        cell.redComponent.text = String(format: "red: %.2f", redValue)
+        cell.greenComponent.text = String(format: "green: %.2f", greenValue)
+        cell.blueComponent.text = String(format: "blue: %.2f", blueValue)
         cell.layer.cornerRadius = 15.0
-        cell.layer.borderWidth = 0.0
-        cell.layer.shadowColor = UIColor.lightGray.cgColor
-        cell.layer.shadowOffset = CGSize(width: 6, height: 5)
-        cell.layer.shadowRadius = 5.0
-        cell.layer.shadowOpacity = 1.0
+//        cell.layer.borderWidth = 0.0
+//        cell.layer.shadowColor = UIColor.lightGray.cgColor
+//        cell.layer.shadowOffset = CGSize(width: 6, height: 5)
+//        cell.layer.shadowRadius = 5.0
+//        cell.layer.shadowOpacity = 1.0
         cell.layer.masksToBounds = false
         return cell
     }

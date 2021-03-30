@@ -13,7 +13,7 @@ class MainView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let collection = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
-        collection.backgroundColor = .white
+        collection.backgroundColor = #colorLiteral(red: 0.1395500302, green: 0.1387277246, blue: 0.1401867867, alpha: 1)
         return collection
     }()
 
@@ -28,7 +28,7 @@ class MainView: UIView {
     }
     
     private func commonInit() {
-        backgroundColor = .white
+        backgroundColor = #colorLiteral(red: 0.1395500302, green: 0.1387277246, blue: 0.1401867867, alpha: 1)
         setupCollectionView()
     }
     

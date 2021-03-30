@@ -11,20 +11,21 @@ class ColorCell: UICollectionViewCell {
     
     public var colorView: UIView = {
         let view = UIView()
-        view.layer.cornerRadius = 15
+        view.layer.cornerRadius = 5
         return view
     }()
     
     public var colorName: UILabel = {
         let text = UILabel()
-        text.textColor = .white
+        text.textColor = #colorLiteral(red: 0.878004849, green: 0.8727861047, blue: 0.8820168376, alpha: 1)
+        text.textAlignment = .center
         text.font = UIFont(name: "HelveticaNeue-Bold", size: 24)
         return text
     }()
     
     private lazy var rgbContainer: UIStackView = {
         let stackView = UIStackView()
-        stackView.axis = .vertical
+        stackView.axis = .horizontal
         stackView.distribution = .equalCentering
         stackView.alignment = .fill
         stackView.addArrangedSubview(redComponent)
@@ -68,6 +69,7 @@ class ColorCell: UICollectionViewCell {
     }
     
     private func commonInit() {
+        backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         setupColorView()
         setupColorName()
         setupComponents()
@@ -77,7 +79,7 @@ class ColorCell: UICollectionViewCell {
         colorView.addSubview(colorName)
         colorName.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            colorName.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 50),
+            colorName.topAnchor.constraint(equalTo: colorView.bottomAnchor, constant: 10),
             colorName.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
             colorName.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
 //            colorName.bottomAnchor.constraint(equalTo: colorView.topAnchor, constant: 20)
@@ -88,9 +90,10 @@ class ColorCell: UICollectionViewCell {
         addSubview(colorView)
         colorView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
+            colorView.centerYAnchor.constraint(equalTo: centerYAnchor),
             colorView.topAnchor.constraint(equalTo: topAnchor),
 //            colorView.heightAnchor.constraint(equalTo: heightAnchor, constant: 80),
-            colorView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            colorView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100),
             colorView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             colorView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
         ])
@@ -100,10 +103,10 @@ class ColorCell: UICollectionViewCell {
         colorView.addSubview(rgbContainer)
         rgbContainer.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            rgbContainer.topAnchor.constraint(equalTo: colorName.bottomAnchor, constant: 30),
+            rgbContainer.topAnchor.constraint(equalTo: colorName.bottomAnchor, constant: 20),
             rgbContainer.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
             rgbContainer.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            rgbContainer.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -50)
+            rgbContainer.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20)
         ])
     }
 }

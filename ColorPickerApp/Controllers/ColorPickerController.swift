@@ -22,7 +22,7 @@ class ColorPickerController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = pickerView
-        view.backgroundColor = .white
+//        view.backgroundColor = .white
         self.colorPicker.delegate = self
         self.colorPicker.supportsAlpha = true
         self.colorPicker.selectedColor = selectedColor

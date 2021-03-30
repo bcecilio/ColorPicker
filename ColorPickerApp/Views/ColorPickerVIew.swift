@@ -14,8 +14,8 @@ class ColorPickerVIew: UIView {
         field.backgroundColor = .white
         field.layer.cornerRadius = 6
         field.placeholder = " Name your Swatch"
-        field.attributedPlaceholder = NSAttributedString(string: " Name your Swatch", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
-        field.backgroundColor = .lightGray
+        field.attributedPlaceholder = NSAttributedString(string: " Name your Swatch", attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        field.backgroundColor = #colorLiteral(red: 0.9008285999, green: 0.8954739571, blue: 0.9049450755, alpha: 1)
         field.borderStyle = .roundedRect
         return field
     }()
@@ -23,7 +23,7 @@ class ColorPickerVIew: UIView {
     public var createButton: UIButton = {
         let button = UIButton()
         button.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 16)
-        button.setTitle("Create Swatch", for: .normal)
+        button.setTitle("Save Swatch", for: .normal)
         button.backgroundColor = .systemBlue
         button.layer.cornerRadius = 5
         return button
@@ -31,9 +31,7 @@ class ColorPickerVIew: UIView {
     
     public var colorButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "beach-ball"), for: .normal)
-//        button.setTitle("create color", for: .normal)
-//        button.backgroundColor = .blue
+        button.setImage(UIImage(named: "Asset 4"), for: .normal)
         return button
     }()
     
@@ -55,7 +53,7 @@ class ColorPickerVIew: UIView {
     }
     
     private func commonInit() {
-//        backgroundColor = .white
+        backgroundColor = .systemGray
         setupTextField()
         setupButton()
         setupColorDisplay()
@@ -98,10 +96,13 @@ class ColorPickerVIew: UIView {
         colorButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             colorButton.topAnchor.constraint(equalTo: colorView.bottomAnchor, constant: 20),
-            colorButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 200),
-            colorButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -200),
-            colorButton.widthAnchor.constraint(equalToConstant: 20),
-            colorButton.heightAnchor.constraint(equalToConstant: 20)
+            colorButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            colorButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            colorButton.heightAnchor.constraint(equalToConstant: 40)
+//            colorButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+//            colorButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 20),
+//            colorButton.widthAnchor.constraint(equalToConstant: 200),
+//            colorButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 }
